@@ -9,7 +9,7 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#"><img src="images/MK logo.jpg"  alt="home button" width="30" height="30" class="d-inline-block align-text-top">
+    <a class="navbar-brand" href="#"><img src="../images/MK logo.jpg"  alt="home button" width="30" height="30" class="d-inline-block align-text-top">
       Kharacter Gallery
 </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,16 +18,16 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link"  href="../index.html">Home</a>
         </li>
        <li class="nav-item">
-          <a class="nav-link" href="pages/details.html">Details</a>
+          <a class="nav-link" href="../pages/details.html">Details</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="pages/about.html">About</a>
+            <a class="nav-link" href="../pages/about.html">About</a>
         </li>
         <li class="nav-item"> 
-            <a class="nav-link" href="pages/new-character-form.html">Add a Kharacter</a>
+            <a class="nav-link active" aria-current="page" href="#">Add a Kharacter</a>
         </li>
           </ul>
         </li>
@@ -42,6 +42,34 @@
   </div>
 </nav>
     <h1>Add New Kharacter</h1>
-    
+    <main class="flex-grow-1">
+      <div class="container-1g py-5">
+        <div class="page-header text-center mb-5 pb-4 border-bottom">
+           
+        </div>
+        <form id="newCharacterForm" action="submit-character.php" method="POST">
+            <div class="mb-3">
+                <label for="name" class="form-label">Kharacter Name:</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="mb-3">
+                <label for="realm" class="form-label">Realm:</label>
+                <input type="text" class="form-control" id="realm" name="realm" required>
+            </div>
+            <div class="mb-3">
+                <label for="rivalry" class="form-label">Rivalry:</label>
+                <input type="text" class="form-control" id="rivalry" name="rivalry" required>
+            </div>
+            <div class="mb-3">
+                <label for="bio" class="form-label">Bio:</label>
+                <textarea class="form-control" id="bio" name="bio" rows="3" required></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="imageUrl" class="form-label">Image URL:</label>
+                <input type="url" class="form-control" id="imageUrl" name="imageUrl" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </main>
 </body>
 </html>
